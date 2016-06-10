@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-wallpaper",
+  "version": "0.0.8",
+  "description": "Cordova Set Wallpaper Plugin",
+  "cordova": {
+    "id": "cordova-plugin-wallpaper",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fbsanches/cordova-plugin-wallpaper"
+  },
+  "keywords": [
+    "cordova",
+    "wallpaper",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Fernando Arce",
+  "license": "Apache-2.0"
+}
