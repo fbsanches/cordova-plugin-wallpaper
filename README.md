@@ -26,6 +26,7 @@ Description: Set an image within the application cordova as wallpaper.
 # cordova-plugin-wallpaper
 
 This plugin is simple. It helps make it easier to use Operation System wallpapers, defining and direct by setting their cordova application, phonegap or Ionic.
+PS: It is not to set a background of your activity, but defines an image that is in the www folder as operating system wallpaper.
 
 ## Installation
 
