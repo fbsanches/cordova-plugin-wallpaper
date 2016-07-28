@@ -18,52 +18,55 @@ import java.io.InputStream;
 /**
  * This class called from JavaScript.
  */
-public class wallpaper extends CordovaPlugin {
-
+public class wallpaper extends CordovaPlugin
+{
 	public Context context = null;
 	private static final boolean IS_AT_LEAST_LOLLIPOP = Build.VERSION.SDK_INT >= 21;
 	
-    @Override
-    public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-		
+	@Override
+	public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException
+	{
 		context = IS_AT_LEAST_LOLLIPOP ? cordova.getActivity().getWindow().getContext() : cordova.getActivity().getApplicationContext();
 		String imgSrc = "";
 		Boolean base64 = false;
 		
-        if (action.equals("start")) {
-			for (int i = 0; i < args.length(); i++) {
-				JSONObject jsonobject = args.getJSONObject(i);
-				imgSrc = jsonobject.getString("image");
-				base64 = jsonobject.getBoolean("base64");
-			}
-            this.echo(imgSrc, base64, context);
+		if (action.equals("start"))
+		{
+			imgSrc = jsonobject.getString("image");
+			base64 = jsonobject.getBoolean("base64");
+			this.echo(imgSrc, base64, context);
 			PluginResult pr = new PluginResult(PluginResult.Status.OK);
-          	pr.setKeepCallback(true);
-          	callbackContext.sendPluginResult(pr);
-           	return true;
-        }
-		
+			pr.setKeepCallback(true);
+			callbackContext.sendPluginResult(pr);
+			return true;
+		}
 		callbackContext.error("Set wallpaper is not a supported.");
-        return false;
-    }
+        	return false;
+	}
 
-    public void echo(String image, Boolean base64, Context context) {
-		try {
+	public void echo(String image, Boolean base64, Context context)
+	{
+		try
+		{
 			AssetManager assetManager = context.getAssets();
 			Bitmap bitmap;
-			if(base64) { //Base64 encoded
+			if(base64) //Base64 encoded
+			{
 				byte[] decoded = Base64.decode(image, Base64.DEFAULT);
 				bitmap = BitmapFactory.decodeByteArray(decoded, 0, decoded.length);
 			}
-			else { //normal path
+			else //normal path
+			{
 				InputStream instr = assetManager.open("www/" + image);
 				bitmap = BitmapFactory.decodeStream(instr);
 			}
-			WallpaperManager myWallpaperManager	= WallpaperManager.getInstance(context);
+			WallpaperManager myWallpaperManager = WallpaperManager.getInstance(context);
 			myWallpaperManager.setBitmap(bitmap);
-		} catch (IOException e) {
+		}
+		catch (IOException e)
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    }
+	}
 }
