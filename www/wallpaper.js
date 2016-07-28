@@ -23,30 +23,31 @@
  * This class contains information about the current wallpaper.
  */
 
-function wallpaper() {
+function wallpaper() {}
 
-}
-
-wallpaper.prototype.setImage = function(image, base64) {
+wallpaper.prototype.setImage = function(image, base64)
+{
 	var successCallback = null;
 	var errorCallback = null;
 	var services = "wallpaper";
 	var dependentProperties = [];
-	dependentProperties.push({
-		image
-	});
-	dependentProperties.push({
+	dependentProperties.push(
+	{
+		image,
 		base64
 	});
 
 	var action = "start"; //future actions new entries. Fixed.
-	if (image) {
+	if (image)
+	{
 		cordova.exec(successCallback, errorCallback, services, action, dependentProperties);
 	}
 };
 
-wallpaper.install = function() {
-	if (!window.plugins) {
+wallpaper.install = function()
+{
+	if (!window.plugins)
+	{
 		window.plugins = {};
 	}
 
