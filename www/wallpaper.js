@@ -27,13 +27,16 @@ function wallpaper() {
 
 }
 
-wallpaper.prototype.setImagePath = function(image) {
+wallpaper.prototype.setImage = function(image, base64) {
 	var successCallback = null;
 	var errorCallback = null;
 	var services = "wallpaper";
 	var dependentProperties = [];
 	dependentProperties.push({
 		image
+	});
+	dependentProperties.push({
+		base64
 	});
 
 	var action = "start"; //future actions new entries. Fixed.
