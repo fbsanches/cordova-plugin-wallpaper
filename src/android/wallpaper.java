@@ -36,8 +36,8 @@ public class wallpaper extends CordovaPlugin
 			for (int i = 0; i < args.length(); i++)
 			{
 				JSONObject jsonobject = args.getJSONObject(i);
-				imgSrc = JSONObject.getString("image");
-				base64 = JSONObject.getBoolean("base64");
+				imgSrc = jsonobject.getString("image");
+				base64 = jsonobject.getBoolean("base64");
 			}
 			this.echo(imgSrc, base64, context);
 			PluginResult pr = new PluginResult(PluginResult.Status.OK);
