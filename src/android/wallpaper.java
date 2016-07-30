@@ -1,8 +1,8 @@
 package fc.fcstudio;
 
-import org.apache.commons.codec.binary.Base64;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import org.apache.commons.codec.binary.Base64;
 import org.json.JSONArray;
 import org.json.JSONException;
 import android.app.WallpaperManager;
