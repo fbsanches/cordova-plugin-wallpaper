@@ -17,11 +17,11 @@ This simple plugin gives you the ability of setting the systems wallpaper, eithe
 ```javascript
 window.plugins.wallpaper.setImage(string /*image path or Base64 string*/, boolean /*flag for using Base64*/);
 ```
-####Notes
+#####Notes
  - path must not start with bar
  - path has not to start with backslash
 
-####Example
+#####Example
 with image from www-directory:
 
 ```javascript
