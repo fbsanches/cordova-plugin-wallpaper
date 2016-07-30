@@ -14,6 +14,7 @@ import android.os.Build;
 import org.apache.cordova.PluginResult;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Base64;
 
 /**
  * This class called from JavaScript.
@@ -32,8 +33,8 @@ public class wallpaper extends CordovaPlugin
 		
 		if (action.equals("start"))
 		{
-			imgSrc = jsonobject.getString("image");
-			base64 = jsonobject.getBoolean("base64");
+			imgSrc = JSONObject.getString("image");
+			base64 = JSONObject.getBoolean("base64");
 			this.echo(imgSrc, base64, context);
 			PluginResult pr = new PluginResult(PluginResult.Status.OK);
 			pr.setKeepCallback(true);
@@ -52,7 +53,7 @@ public class wallpaper extends CordovaPlugin
 			Bitmap bitmap;
 			if(base64) //Base64 encoded
 			{
-				byte[] decoded = Base64.decode(image, Base64.DEFAULT);
+				byte[] decoded = Base64.getDecoder().decode(image);
 				bitmap = BitmapFactory.decodeByteArray(decoded, 0, decoded.length);
 			}
 			else //normal path
