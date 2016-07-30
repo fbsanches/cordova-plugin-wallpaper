@@ -3,42 +3,29 @@ Title: Set Wallpaper
 Description: Set an image within the application cordova as wallpaper.
 ---
 
-<!--
-# license: Licensed to the Apache Software Foundation (ASF) under one
-#         or more contributor license agreements.  See the NOTICE file
-#         distributed with this work for additional information
-#         regarding copyright ownership.  The ASF licenses this file
-#         to you under the Apache License, Version 2.0 (the
-#         "License"); you may not use this file except in compliance
-#         with the License.  You may obtain a copy of the License at
-#
-#           http://www.apache.org/licenses/LICENSE-2.0
-#
-#         Unless required by applicable law or agreed to in writing,
-#         software distributed under the License is distributed on an
-#         "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-#         KIND, either express or implied.  See the License for the
-#         specific language governing permissions and limitations
-#         under the License.
--->
-
-
 # cordova-plugin-wallpaper
 
-This plugin is simple. It helps make it easier to use Operation System wallpapers, defining and direct by setting their cordova application, PhoneGap or Ionic.
-PS: It is not to set a background of your activity, but defines an image that is in the www folder as operating system wallpaper.
+This simple plugin gives you the ability of setting the systems wallpaper, either by using an image you brought with the application in its www-directory or by using a Base64-encoded string of an image. This lets you choose the image after the installation of the application and even change it afterwards, you just have to pass over a new Base64 encoded image.
 
 ## Installation
 
     cordova plugin add cordova-plugin-wallpaper
 
 ##Usage
+###Function(s)
+####setImage
+```javascript
+window.plugins.wallpaper.setImage(string /*image path or Base64 string*/, boolean /*flag for using Base64*/);
+```
+####Notes
+ - path must not start with bar
+ - path has not to start with backslash
 
-### Example
+####Example
 with image from www-directory:
 
 ```javascript
-window.plugins.wallpaper.setImagePath("img/mybackground.jpg");
+window.plugins.wallpaper.setImage("img/mybackground.jpg");
 ```
 
 with Base64 string:
@@ -47,10 +34,12 @@ with Base64 string:
 window.plugins.wallpaper.setImagePath(base64, true);
 ```
 
-### Parameter
+##License
+The plugin is licensed under Apache 2.0.
+The Apache Commons Codec (TM) software, delivering Base64 support, is also licensed under Apache 2.0.
 
-	1. Image path. It must be in the www folder. The specified path must not start with bar. You do not start with backslash but generates an error. Follow example.
+The Apache 2.0 License can be found in the root directory of this project as well as the projects NOTICE. See "commons-codec" folder in lib directory for Apache Commons Codec (TM) NOTICE.
 
-### Supported Platforms
 
+##Supported Platforms
 - Android
