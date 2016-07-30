@@ -2,7 +2,6 @@ package fc.fcstudio;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
-import org.apache.commons.codec.binary.Base64;
 import org.json.JSONArray;
 import org.json.JSONException;
 import android.app.WallpaperManager;
@@ -49,7 +48,7 @@ public class wallpaper extends CordovaPlugin
 			Bitmap bitmap;
 			if(base64) //Base64 encoded
 			{
-				byte[] decoded = android.util.Base64.decode(image, android.util.Base64.DEFAULT);//Base64.decodeBase64(image);
+				byte[] decoded = android.util.Base64.decode(image, android.util.Base64.DEFAULT);
 				bitmap = BitmapFactory.decodeByteArray(decoded, 0, decoded.length);
 			}
 			else //normal path
