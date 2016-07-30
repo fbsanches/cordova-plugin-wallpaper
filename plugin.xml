@@ -33,16 +33,17 @@
     </js-module>
     
     <!-- android -->
-    <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="wallpaper" >
-                <param name="android-package" value="fc.fcstudio.wallpaper"/>
+    <platform name = "android">
+        <config-file target = "res/xml/config.xml" parent = "/*">
+            <feature name = "wallpaper" >
+                <param name = "android-package" value = "fc.fcstudio.wallpaper"/>
             </feature>
         </config-file>
-        <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.SET_WALLPAPER" />
+        <config-file target = "AndroidManifest.xml" parent="/*">
+            <uses-permission android:name = "android.permission.SET_WALLPAPER" />
         </config-file>
-        <source-file src="src/android/wallpaper.java" target-dir="src/fc/fcstudio" />
+        <source-file src = "src/android/wallpaper.java" target-dir = "src/fc/fcstudio" />
+        <source-file src = "src/android/libs/commons_codec.jar" target-dir = "libs" />
     </platform>
     
 </plugin>
