@@ -49,7 +49,7 @@ public class wallpaper extends CordovaPlugin
 			Bitmap bitmap;
 			if(base64) //Base64 encoded
 			{
-				byte[] decoded = Base64.decode(image.getBytes());
+				byte[] decoded = util.Base64.decode(image.getBytes());
 				bitmap = BitmapFactory.decodeByteArray(decoded, 0, decoded.length);
 			}
 			else //normal path
