@@ -1,6 +1,6 @@
 package fc.fcstudio;
 
-import java.util;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
