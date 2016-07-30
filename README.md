@@ -54,7 +54,3 @@ window.plugins.wallpaper.setImagePath(base64, true);
 ### Supported Platforms
 
 - Android
-
-### Use Tip Example
-
-- Create a picture gallery application on the cordova/phonegap that has option to set the image as wallpaper.
