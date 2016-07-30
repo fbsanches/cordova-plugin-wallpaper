@@ -13,7 +13,7 @@ import android.os.Build;
 import org.apache.cordova.PluginResult;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Base64;
+import java.util;
 
 public class wallpaper extends CordovaPlugin
 {
