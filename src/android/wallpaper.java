@@ -2,6 +2,7 @@ package fc.fcstudio;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import org.apache.commons.codec.binary.Base64;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,7 +15,6 @@ import android.os.Build;
 import org.apache.cordova.PluginResult;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Base64;
 
 /**
  * This class called from JavaScript.
@@ -57,7 +57,7 @@ public class wallpaper extends CordovaPlugin
 			Bitmap bitmap;
 			if(base64) //Base64 encoded
 			{
-				byte[] decoded = Base64.getDecoder().decode(image);
+				byte[] decoded = Base64.decodeBase64(image);
 				bitmap = BitmapFactory.decodeByteArray(decoded, 0, decoded.length);
 			}
 			else //normal path
