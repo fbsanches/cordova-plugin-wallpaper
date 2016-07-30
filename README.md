@@ -38,7 +38,7 @@ window.plugins.wallpaper.setImagePath(base64, true);
 The plugin is licensed under Apache 2.0.
 The Apache Commons Codec (TM) software, delivering Base64 support, is also licensed under Apache 2.0.
 
-The Apache 2.0 License can be found in the root directory of this project as well as the projects NOTICE. See "commons-codec" folder in lib directory for Apache Commons Codec (TM) NOTICE.
+The Apache 2.0 License can be found in the root directory of this project as well as the projects NOTICE. See "commons-codec" folder in lib directory for Apache Commons Codec (TM) NOTICE and extra copy of Apache 2.0.
 
 
 ##Supported Platforms
