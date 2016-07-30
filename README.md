@@ -14,10 +14,10 @@ This simple plugin gives you the ability of setting the systems wallpaper, eithe
 ##Usage
 ###Function(s)
 ####setImage
+Sets image under given path or image contained in Base64 string as systems background image:
 ```javascript
 window.plugins.wallpaper.setImage(string /*image path or Base64 string*/, boolean /*flag for using Base64*/);
 ```
-Sets image under given path or image contained in Base64 string as systems background image.
 #####Notes
  - path must not start with bar
  - path has not to start with backslash
