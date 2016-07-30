@@ -1,5 +1,6 @@
 package fc.fcstudio;
 
+import java.util.Base64;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
@@ -13,7 +14,6 @@ import android.os.Build;
 import org.apache.cordova.PluginResult;
 import java.io.IOException;
 import java.io.InputStream;
-import java.*;
 
 public class wallpaper extends CordovaPlugin
 {
