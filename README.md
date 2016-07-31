@@ -49,6 +49,5 @@ window.plugins.wallpaper.setImage(base64, true);
 The plugin is licensed under Apache 2.0.
 The Apache 2.0 license can be found in the root directory of this project as well as the projects NOTICE.
 
-
 ##Supported Platforms
 - Android
