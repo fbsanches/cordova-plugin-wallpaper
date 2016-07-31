@@ -43,7 +43,6 @@
             <uses-permission android:name = "android.permission.SET_WALLPAPER" />
         </config-file>
         <source-file src = "src/android/wallpaper.java" target-dir = "src/fc/fcstudio" />
-        <source-file src = "src/android/lib/commons-codec/commons-codec.jar" target-dir = "libs" />
     </platform>
     
 </plugin>
