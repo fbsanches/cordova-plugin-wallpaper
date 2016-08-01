@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-wallpaper",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Cordova Set Wallpaper Plugin",
   "cordova": {
     "id": "cordova-plugin-wallpaper",
