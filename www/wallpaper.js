@@ -34,7 +34,7 @@ wallpaper.prototype.setImage = function(image)
 	dependentProperties.push(image, false);
 
 	var action = "start"; //future actions new entries. Fixed.
-	if (image)
+	if(image)
 	{
 		cordova.exec(successCallback, errorCallback, services, action, dependentProperties);
 	}
@@ -49,7 +49,7 @@ wallpaper.prototype.setImageBase64 = function(base64)
 	dependentProperties.push(base64, true);
 
 	var action = "start"; //future actions new entries. Fixed.
-	if (image)
+	if(base64)
 	{
 		cordova.exec(successCallback, errorCallback, services, action, dependentProperties);
 	}
