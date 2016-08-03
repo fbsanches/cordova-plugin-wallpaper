@@ -1,0 +1,16 @@
+language: android
+android:
+  components:
+    - build-tools-24.0.1
+    - android-23
+    
+install:
+- npm install -g cordova
+
+script:
+- cordova create test
+- cd test
+- cordova platform add android
+- cordova plugin add https://github.com/flyingPotat0e/cordova-plugin-wallpaper.git
+- cordova build android
+- cd ..
