@@ -23,8 +23,14 @@ This simple plugin gives you the ability of setting the systems wallpaper, eithe
 4. [Supported Platforms](#supported-platforms)
 
 ## Installation
+stable npm package:
 ```
 cordova plugin add cordova-plugin-wallpaper
+```
+
+via maybe unstable GitHub-repository:
+```
+cordova plugin add https://github.com/fbsanches/cordova-plugin-wallpaper.git
 ```
 
 ##Usage
