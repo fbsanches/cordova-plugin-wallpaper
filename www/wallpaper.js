@@ -25,13 +25,28 @@
 
 function wallpaper() {}
 
-wallpaper.prototype.setImage = function(image, base64)
+wallpaper.prototype.setImage = function(image)
 {
 	var successCallback = null;
 	var errorCallback = null;
 	var services = "wallpaper";
 	var dependentProperties = [];
-	dependentProperties.push(image, base64);
+	dependentProperties.push(image);
+
+	var action = "start"; //future actions new entries. Fixed.
+	if (image)
+	{
+		cordova.exec(successCallback, errorCallback, services, action, dependentProperties);
+	}
+};
+
+wallpaper.prototype.setImageBase64 = function(base64)
+{
+	var successCallback = null;
+	var errorCallback = null;
+	var services = "wallpaper";
+	var dependentProperties = [];
+	dependentProperties.push(base64);
 
 	var action = "start"; //future actions new entries. Fixed.
 	if (image)
