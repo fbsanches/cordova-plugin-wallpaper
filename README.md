@@ -38,6 +38,8 @@ window.plugins.wallpaper.setImage(string /* image path */);
 window.plugins.wallpaper.setImage("img/mybackground.jpg");
 ```
 
+---
+
 ####setImageBase64
 Sets image contained in Base64 string as systems background image:
 ```javascript
