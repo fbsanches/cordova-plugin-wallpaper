@@ -24,25 +24,29 @@ cordova plugin add cordova-plugin-wallpaper
 ##Usage
 ###Function(s)
 ####setImage
-Sets image under given path or image contained in Base64 string as systems background image:
+Sets image under given path as systems background image:
 ```javascript
-window.plugins.wallpaper.setImage(string /*image path or Base64 string*/, boolean /*flag for using Base64*/);
+window.plugins.wallpaper.setImage(string /* image path */);
 ```
+
 #####Notes
  - path must not start with bar
  - path has not to start with backslash
 
 #####Example
-with image from www-directory:
-
 ```javascript
 window.plugins.wallpaper.setImage("img/mybackground.jpg");
 ```
 
-with Base64 string:
-
+####setImageBase64
+Sets image contained in Base64 string as systems background image:
 ```javascript
-window.plugins.wallpaper.setImage(base64, true);
+window.plugins.wallpaper.setImage(string /* Base64 string */);
+```
+
+#####Example
+```javascript
+window.plugins.wallpaper.setImage(base64);
 ```
 
 ##License
