@@ -28,7 +28,7 @@ stable npm package:
 cordova plugin add cordova-plugin-wallpaper
 ```
 
-via maybe unstable GitHub-repository:
+maybe unstable GitHub-repository:
 ```
 cordova plugin add https://github.com/fbsanches/cordova-plugin-wallpaper.git
 ```
