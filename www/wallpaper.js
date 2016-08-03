@@ -31,7 +31,7 @@ wallpaper.prototype.setImage = function(image)
 	var errorCallback = null;
 	var services = "wallpaper";
 	var dependentProperties = [];
-	dependentProperties.push(image);
+	dependentProperties.push(image, false);
 
 	var action = "start"; //future actions new entries. Fixed.
 	if (image)
@@ -46,7 +46,7 @@ wallpaper.prototype.setImageBase64 = function(base64)
 	var errorCallback = null;
 	var services = "wallpaper";
 	var dependentProperties = [];
-	dependentProperties.push(base64);
+	dependentProperties.push(base64, true);
 
 	var action = "start"; //future actions new entries. Fixed.
 	if (image)
