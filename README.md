@@ -6,7 +6,9 @@ Description: Set an image within the application cordova as wallpaper.
 [![Code Climate](https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper/badges/gpa.svg)](https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper)
 [![Issue Count](https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper/badges/issue_count.svg)](https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper)
 
-[![Build Status](https://travis-ci.org/flyingPotat0e/cordova-plugin-wallpaper.svg?branch=master)](https://travis-ci.org/flyingPotat0e/cordova-plugin-wallpaper)
+|Android|
+|:-:|
+|[![Build Status](https://travis-ci.org/flyingPotat0e/cordova-plugin-wallpaper.svg?branch=master)](https://travis-ci.org/flyingPotat0e/cordova-plugin-wallpaper)|
 
 # cordova-plugin-wallpaper
 
