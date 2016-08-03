@@ -20,7 +20,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
       id="cordova-plugin-wallpaper"
-      version="0.1.0">
+      version="0.1.1">
     <name>Set Wallpaper</name>
     <description>Cordova Set Wallpaper Plugin</description>
     <license>Apache 2.0</license>
