@@ -11,6 +11,6 @@ script:
 - cordova create test
 - cd test
 - cordova platform add android
-- cordova plugin add https://github.com/flyingPotat0e/cordova-plugin-wallpaper.git
+- cordova plugin add https://github.com/fbsanches/cordova-plugin-wallpaper.git
 - cordova build android
 - cd ..

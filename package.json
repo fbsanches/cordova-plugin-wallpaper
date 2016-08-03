@@ -1,10 +1,6 @@
 {
   "name": "cordova-plugin-wallpaper",
-<<<<<<< HEAD
-  "version": "0.1.0",
-=======
   "version": "0.1.1",
->>>>>>> 0cc1e525fe64b83e1ebca563576d6b600d45d381
   "description": "Cordova Set Wallpaper Plugin",
   "cordova": {
     "id": "cordova-plugin-wallpaper",
@@ -22,6 +18,13 @@
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": "Fernando Arce",
-  "license": "Apache-2.0"
+  "author": {
+    "name": "Fernando Arce",
+    "url": "https://github.com/fbsanches"
+  },
+  "license": "Apache-2.0",
+  "contributors": [{
+    "name": "flyingPotat0e",
+    "url": "https://github.com/flyingPotat0e"
+  }]
 }
