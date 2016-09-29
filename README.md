@@ -5,6 +5,9 @@ Description: Set an image within the application cordova as wallpaper.
 
 [![npm version](https://badge.fury.io/js/cordova-plugin-wallpaper.svg)](https://badge.fury.io/js/cordova-plugin-wallpaper)
 
+[![Code Climate](https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper/badges/gpa.svg)](https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper)
+[![Issue Count](https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper/badges/issue_count.svg)](https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper)
+
 |Android|
 |:-:|
 |[![Build Status](https://travis-ci.org/flyingPotat0e/cordova-plugin-wallpaper.svg?branch=master)](https://travis-ci.org/flyingPotat0e/cordova-plugin-wallpaper)|
@@ -45,6 +48,19 @@ window.plugins.wallpaper.setImage(string /* image path */);
 #####Example
 ```javascript
 window.plugins.wallpaper.setImage("img/mybackground.jpg");
+```
+
+---
+
+####setImageHttp
+Sets image from url as background image:
+```javascript
+window.plugins.wallpaper.setImageHttp(string /* url */);
+```
+
+#####Example
+```javascript
+window.plugins.wallpaper.setImageHttp("https://example.com/image.jpg");
 ```
 
 ---
