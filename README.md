@@ -49,6 +49,19 @@ window.plugins.wallpaper.setImage("img/mybackground.jpg");
 
 ---
 
+####setImageHttp
+Sets image from url as background image:
+```javascript
+window.plugins.wallpaper.setImageHttp(string /* url */);
+```
+
+#####Example
+```javascript
+window.plugins.wallpaper.setImageHttp("https://example.com/image.jpg");
+```
+
+---
+
 ####setImageBase64
 Sets image contained in Base64 string as systems background image:
 ```javascript
