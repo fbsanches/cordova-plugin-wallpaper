@@ -16,7 +16,7 @@ Description: Set an image within the application cordova as wallpaper.
 
 This simple plugin gives you the ability of setting the systems wallpaper, either by using an image you brought with the application in its www-directory or by using a Base64-encoded string of an image. This lets you choose the image after the installation of the application and even change it afterwards, you just have to pass over a new Base64 encoded image.
 
-##Table of Contents
+## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [License](#license)
