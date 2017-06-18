@@ -47,7 +47,7 @@ window.plugins.wallpaper.setImage(string /* image path */);
 
 ##### Example
 ```javascript
-window.plugins.wallpaper.setImage("img/mybackground.jpg");
+window.plugins.wallpaper.setImage('img/mybackground.jpg');
 ```
 
 ---
@@ -60,7 +60,7 @@ window.plugins.wallpaper.setImageHttp(string /* url */);
 
 ##### Example
 ```javascript
-window.plugins.wallpaper.setImageHttp("https://example.com/image.jpg");
+window.plugins.wallpaper.setImageHttp('https://example.com/image.jpg');
 ```
 
 ---
@@ -74,6 +74,19 @@ window.plugins.wallpaper.setImageBase64(string /* Base64 string */);
 ##### Example
 ```javascript
 window.plugins.wallpaper.setImageBase64(base64);
+```
+
+### Callbacks
+Every function provides optional callbacks. The callback provides an error parameter in case there is an error. If there is no error, everything went well:
+```javascript
+window.plugins.wallpaper.setImage('path/to/image.png', function(error) {
+  if (error) {
+    console.error(error);
+  }
+  else {
+    console.log('Success setting wallpaper.');
+  }
+});
 ```
 
 ## License
