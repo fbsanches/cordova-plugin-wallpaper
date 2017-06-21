@@ -102,5 +102,5 @@ The Apache 2.0 license can be found in the root directory of this project as wel
 [cc-url]: https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper
 [cc-issues-img]: https://img.shields.io/codeclimate/issues/github/fbsanches/cordova-plugin-wallpaper.svg?style=flat-square&colorA=999999&maxAge=10
 [cc-issues-url]: https://codeclimate.com/github/fbsanches/cordova-plugin-wallpaper/issues
-[android-img]: https://img.shields.io/travis/fbsanches/cordova-plugin-wallpaper.svg?style=flat-square&colorA=999999&maxAge=10
-[android-url]: https://travis-ci.org/fbsanches/cordova-plugin-wallpaper
+[android-img]: https://img.shields.io/circleci/project/github/fbsanches/cordova-plugin-wallpaper.svg?style=flat-square&colorA=999999&maxAge=10
+[android-url]: https://circleci.com/gh/fbsanches/cordova-plugin-wallpaper
