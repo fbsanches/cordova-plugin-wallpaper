@@ -1,12 +1,12 @@
+version: 2.0
+
 jobs:
   build:
     docker:
-      - image: flyingp0tat0:cordova-android
-
-test:
-  override:
-    - cordova create test
-    - cd test
-    - cordova platform add android
-    - cordova plugin add https://github.com/fbsanches/cordova-plugin-wallpaper
-    - cordova build
+      - image: flyingp0tat0/cordova-android
+    working_directory: /usr/local/test
+    steps:
+      - run: cordova create ../test io.cordova.test
+      - run: cordova platform add android
+      - run: cordova plugin add https://github.com/fbsanches/cordova-plugin-wallpaper
+      - run: cordova build
