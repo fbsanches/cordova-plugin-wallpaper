@@ -3,8 +3,10 @@ jobs:
     docker:
       - image: flyingp0tat0:cordova-android
 
-    steps:
-      - run: cordova create test
-      - run: cd test && cordova platform add android
-      - run: cd test && cordova plugin add https://github.com/fbsanches/cordova-plugin-wallpaper
-      - run: cd test && cordova build
+test:
+  override:
+    - cordova create test
+    - cd test
+    - cordova platform add android
+    - cordova plugin add https://github.com/fbsanches/cordova-plugin-wallpaper
+    - cordova build
