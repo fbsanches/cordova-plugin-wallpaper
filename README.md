@@ -1,16 +1,7 @@
 ---
 Title: Set Wallpaper
-Description: Set an image within the application cordova as wallpaper.
+Description: Set an image from a Cordova Android app as Homescreen or Lockscreen wallpaper.
 ---
-
-[![npm version][version-img]][version-url]
-
-[![Code Climate][cc-img]][cc-url]
-[![Issue Count][cc-issues-img]][cc-issues-url]
-
-|Android|
-|:-:|
-|[![Build Status][android-img]][android-url]|
 
 # cordova-plugin-wallpaper
 
