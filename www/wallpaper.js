@@ -1,6 +1,7 @@
+cordova.define("cordova-plugin-wallpaper.wallpaper", function(require, exports, module) {
 function wallpaper() {}
 
-wallpaper.prototype.setImage = function(image, callback) {
+wallpaper.prototype.setImage = function(image, type, callback) {
     var services = "wallpaper";
     var dependentProperties = [];
     dependentProperties.push(image, false);
@@ -15,12 +16,32 @@ wallpaper.prototype.setImage = function(image, callback) {
     };
 
     var action = "start"; //future actions new entries. Fixed.
+    if (type=="lock") {
+      action="lockscreen";
+    }
     if (image) {
         cordova.exec(successCallback, errorCallback, services, action, dependentProperties);
     }
 };
 
-function setBase64(base64, callback) {
+wallpaper.prototype.saveWallpaper = function(callback) {
+    var services = "wallpaper";
+    var dependentProperties = [];
+
+    var successCallback = function() {
+      typeof callback === 'function' && callback();
+    };
+
+    var errorCallback = function(error) {
+      var errorBack = error || 'unknown cordova error when setting wallpaper';
+      typeof callback === 'function' && callback(errorBack);
+    };
+
+    var action = "save_homescreen_wp";
+    cordova.exec(successCallback, errorCallback, services, action, dependentProperties);
+};
+
+function setBase64(base64, type, callback) {
     var services = "wallpaper";
     var dependentProperties = [];
     dependentProperties.push(base64, true);
@@ -35,6 +56,9 @@ function setBase64(base64, callback) {
     };
 
     var action = "start"; //future actions new entries. Fixed.
+    if (type=="lock") {
+      action="lockscreen";
+    }
     if(base64) {
         cordova.exec(successCallback, errorCallback, services, action, dependentProperties);
     }
@@ -44,7 +68,7 @@ wallpaper.prototype.setImageBase64 = function(base64, callback) {
     setBase64(base64, callback);
 };
 
-wallpaper.prototype.setImageHttp = function(url, callback) {
+wallpaper.prototype.setImageHttp = function(url, type, callback) {
     var request = null;
     if(window.XMLHttpRequest) {
         request = new XMLHttpRequest();
@@ -70,7 +94,7 @@ wallpaper.prototype.setImageHttp = function(url, callback) {
                 raw += String.fromCharCode.apply(null, subArray);
             }
             var base64 = btoa(raw);
-            setBase64(base64, callback);
+            setBase64(base64, type, callback);
         }
         function XHRerror(error) {
             typeof callback === 'function' && callback(error);
@@ -97,3 +121,5 @@ wallpaper.install = function() {
 };
 
 cordova.addConstructor(wallpaper.install);
+
+});
